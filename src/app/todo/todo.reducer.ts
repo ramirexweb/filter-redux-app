@@ -4,6 +4,8 @@ import { Todo } from './model/todo.model';
 const todo1 = new Todo('Vencer a Thanos');
 const todo2 = new Todo('Salvar el mundo');
 
+todo2.completado = true;
+
 
 const estadoInicial: Todo[] = [ todo1, todo2];
 

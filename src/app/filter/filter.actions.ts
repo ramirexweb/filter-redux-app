@@ -1,5 +1,4 @@
 import { Action } from '@ngrx/store';
-import { type } from 'os';
 
 export const SET_FILTRO = '[Filter] Set Filtro';
 export type filtrosValidos = 'todos' | 'completados' | 'pendientes';

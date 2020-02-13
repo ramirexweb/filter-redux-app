@@ -11,8 +11,8 @@ import { TodoFooterComponent } from './todo/todo-footer/todo-footer.component';
 import { TodoAddComponent } from './todo/todo-add/todo-add.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { todoReducer } from './todo/todo.reducer';
 import { environment } from 'src/environments/environment';
+import { appReducers } from './app.reducers';
 
 @NgModule({
   declarations: [
@@ -27,9 +27,7 @@ import { environment } from 'src/environments/environment';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    StoreModule.forRoot({
-      todos: todoReducer
-    }),
+    StoreModule.forRoot(appReducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production
